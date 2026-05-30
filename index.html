@@ -697,7 +697,8 @@
         <div class="app-container">
             <div class="dashboard-header">
                 <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Gerald Smith" class="profile-pic" id="profileImage">
+                    <!-- Local profile.jpg image (saved in same directory) -->
+                    <img src="profile.jpg" alt="Gerald Smith" class="profile-pic" id="profileImage">
                     <div class="user-details">
                         <div class="username">Gerald Smith</div>
                         <div class="user-email">smithgerald918@gmail.com</div>
@@ -886,7 +887,7 @@
     </div>
 
     <script>
-        // NEW CREDENTIALS: Gerald Smith | GBP Balance: 3,575,233.80
+        // CREDENTIALS: Gerald Smith | GBP Balance: 3,575,233.80
         const USER_EMAIL = "smithgerald918@gmail.com";
         const USER_PASSWORD = "Ericalover1";
         const USER_PIN = "4013";
@@ -1171,8 +1172,7 @@
             loadRecentTransactions();
             loadFullTransactionHistory();
             setupEventListeners();
-            const profileImg = document.getElementById('profileImage');
-            profileImg.onerror = () => { profileImg.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"; };
+            // Ensure local profile.jpg is used; if missing, no fallback (stays as is)
         });
     </script>
 </body>
